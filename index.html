@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aunhelloworld</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .text {
+            color: #333;
+            font-size: 2.5rem;
+            letter-spacing: 0.3em;
+            text-transform: lowercase;
+            position: relative;
+            transition: all 0.5s ease;
+        }
+
+        .text:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            cursor: default;
+        }
+
+        .text::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 0;
+            background: #444;
+            bottom: -10px;
+            left: 0;
+            transition: width 0.5s ease;
+        }
+
+        .text:hover::before {
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            animation: fadeIn 2s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">aunhelloworld</div>
+    </div>
+</body>
+</html>
