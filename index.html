@@ -23,38 +23,36 @@
 
         .container {
             position: relative;
+            text-align: center;
         }
 
-        .text {
+        .main-text {
             color: #333;
             font-size: 2.5rem;
             letter-spacing: 0.3em;
             text-transform: lowercase;
-            position: relative;
+            margin-bottom: 20px;
             transition: all 0.5s ease;
         }
 
-        .text:hover {
+        .main-text:hover {
             color: #fff;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            cursor: default;
         }
 
-        .text::before {
-            content: '';
-            position: absolute;
-            height: 2px;
-            width: 0;
-            background: #444;
-            bottom: -10px;
-            left: 0;
-            transition: width 0.5s ease;
+        .telegram-link {
+            display: block;
+            color: #222;
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.5s ease;
         }
 
-        .text:hover::before {
-            width: 100%;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        .telegram-link:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
         @keyframes fadeIn {
@@ -69,7 +67,8 @@
 </head>
 <body>
     <div class="container">
-        <a href="https://t.me/+TEiCS6UskP5iNGRl" target="_blank" class="text">join telegram</a>
+        <div class="main-text">aunhelloworld</div>
+        <a href="https://t.me/+TEiCS6UskP5iNGRl" target="_blank" class="telegram-link">Join Telegram</a>
     </div>
 </body>
 </html>
